@@ -1,0 +1,25 @@
+{
+  "name": "Hide songs in description",
+  "description": "Hide Youtube Songs in Description. Currently only hiding, Toggling coming soon.",
+  "version":"1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "run_at": "document_idle",
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "activeTab"
+  ]
+}
